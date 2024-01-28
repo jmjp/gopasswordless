@@ -1,0 +1,8 @@
+# ignore tmp folder
+/tmp/
+
+# ignore .env file
+.env
+
+# ignore .log file
+*.log

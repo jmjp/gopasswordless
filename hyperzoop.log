@@ -1,0 +1,10 @@
+{"level":"info","ts":1706360644.9447126,"caller":"http/server.go:58","msg":"HTTP server shutdown"}
+{"level":"info","ts":1706360644.9447126,"caller":"http/server.go:48","msg":"HTTP server stopping serving connections"}
+{"level":"info","ts":1706361852.527633,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706362757.0554607,"msg":"refresh request","refresh":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706362870.1406238,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706362870.1406238,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706389010.3857076,"msg":"refresh request","refresh":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706389021.966771,"msg":"refresh request","refresh":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706390953.6744797,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706390953.6744797,"msg":"HTTP server shutdown"}
