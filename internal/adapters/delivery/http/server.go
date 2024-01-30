@@ -3,8 +3,7 @@ package delivery
 import (
 	"context"
 	"database/sql"
-	"errors"
-	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -16,20 +15,22 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
 	"github.com/go-chi/httprate"
-	"go.uber.org/zap"
+	"github.com/redis/go-redis/v9"
 )
 
 type HTTPServer struct {
 	port   int
 	db     *sql.DB
+	redis  *redis.Client
 	router *chi.Mux
 }
 
-func NewHTTPServer(port int, db *sql.DB) *HTTPServer {
+func NewHTTPServer(port int, db *sql.DB, redis *redis.Client) *HTTPServer {
 	router := chi.NewRouter()
 	return &HTTPServer{
 		port:   port,
 		db:     db,
+		redis:  redis,
 		router: router,
 	}
 }
@@ -42,23 +43,22 @@ func (s *HTTPServer) Start() {
 	s.setupRoutes()
 
 	go func() {
-		fmt.Printf("Starting HTTP server on port %d\n", s.port)
-		if err := server.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
-			zap.L().Fatal("HTTP server error", zap.Error(err))
+		log.Printf("Starting HTTP server on port %d\n", s.port)
+		if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+			log.Fatalf("HTTP server error: %v", err)
 		}
-		zap.L().Info("HTTP server stoping serving connections")
+		log.Printf("HTTP server stopping serving connections\n")
 	}()
 
 	sc := make(chan os.Signal, 1)
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM)
 	<-sc
-	ctx, shutdownRelease := context.WithTimeout(context.Background(), 10*time.Second)
-	defer shutdownRelease()
+	ctx, shutdown := context.WithTimeout(context.Background(), 10*time.Minute)
+	defer shutdown()
 	if err := server.Shutdown(ctx); err != nil {
-		zap.L().Fatal("HTTP server error", zap.Error(err))
+		log.Fatalf("HTTP server error: %v", err)
 	}
-	zap.L().Info("HTTP server shutdown")
-
+	log.Printf("HTTP server shutdown\n")
 }
 
 func (s *HTTPServer) setupMiddlewares() {

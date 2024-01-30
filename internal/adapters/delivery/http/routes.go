@@ -4,21 +4,24 @@ import (
 	"hyperzoop/internal/adapters/delivery/http/controllers"
 	"hyperzoop/internal/adapters/delivery/http/middlewares"
 	repositories "hyperzoop/internal/adapters/repositories/pg"
-	authusecases "hyperzoop/internal/usecases/auth"
+	redisRepositories "hyperzoop/internal/adapters/repositories/redis"
+	"hyperzoop/internal/core/ports"
+	"hyperzoop/internal/core/services"
+	"os"
 )
 
 func (s *HTTPServer) setupRoutes() {
 	userRepository := repositories.NewUserPostgresRepository(s.db)
-	magicRepository := repositories.NewMagicLinkPostgresRepository(s.db)
+	var magicRepository ports.MagicLinkRepository
+	if os.Getenv("env") == "prod" {
+		magicRepository = redisRepositories.NewMagicLinkRedisRepository(s.redis)
+	} else {
+		magicRepository = repositories.NewMagicLinkPostgresRepository(s.db)
+	}
 	sessionRepository := repositories.NewSessionPostgresRepository(s.db)
 
-	loginUseCase := authusecases.NewLoginUseCase(userRepository, magicRepository)
-	verifyUseCase := authusecases.NewVerifyUseCase(magicRepository, userRepository, sessionRepository)
-	refreshUseCase := authusecases.NewRefreshUseCase(sessionRepository, userRepository)
-	revokeUseCase := authusecases.NewRevokeUseCase(sessionRepository)
-	sessionUseCase := authusecases.NewSessionUseCase(sessionRepository)
-
-	authController := controllers.NewAuthenticationController(loginUseCase, verifyUseCase, refreshUseCase, revokeUseCase, sessionUseCase)
+	authService := services.NewAuthService(userRepository, magicRepository, sessionRepository)
+	authController := controllers.NewAuthenticationController(authService)
 
 	s.router.Post("/auth/login", authController.Login)
 	s.router.Get("/auth/verify", authController.Verify)

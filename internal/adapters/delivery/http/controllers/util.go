@@ -27,9 +27,9 @@ func ResponseError(w http.ResponseWriter, code int, message string) {
 	json.NewEncoder(w).Encode(body)
 }
 
-func ResponseMessage(w http.ResponseWriter, code int, message *string) {
+func ResponseMessage(w http.ResponseWriter, code int, message string) {
 	defaultHeaders(w)
-	body := map[string]*string{"message": message}
+	body := map[string]string{"message": message}
 	json.NewEncoder(w).Encode(body)
 }
 

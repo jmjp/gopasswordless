@@ -11,16 +11,16 @@ import (
 
 type GeoIpLocation struct {
 	Ip               string  `json:"ip"`
-	Latitude         string  `json:"latitude" bson:"latitude"`
-	Longitude        string  `json:"longitude" bson:"longitude"`
-	City             *string `json:"city" bson:"city"`
-	Region           *string `json:"region" bson:"state"`
-	Country          string  `json:"country" bson:"country"`
-	OrganizationName string  `json:"organization_name" bson:"organization_name"`
+	Latitude         string  `json:"latitude"`
+	Longitude        string  `json:"longitude"`
+	City             *string `json:"city"`
+	Region           *string `json:"region"`
+	Country          string  `json:"country"`
+	OrganizationName string  `json:"organization_name"`
 }
 
 func GetGeoLocationByIp(ip string) (loc *GeoIpLocation, err error) {
-	if os.Getenv("environment") == "dev" {
+	if os.Getenv("env") == "dev" {
 		ip = "66.241.125.71"
 	}
 	url := fmt.Sprintf("https://get.geojs.io/v1/ip/geo/%s.json", ip)

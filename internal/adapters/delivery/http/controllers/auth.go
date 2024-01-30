@@ -3,29 +3,21 @@ package controllers
 import (
 	"errors"
 	"fmt"
+	"hyperzoop/internal/core/ports"
 	"hyperzoop/internal/infra/dtos"
 	"hyperzoop/internal/infra/token"
-	usecases "hyperzoop/internal/usecases/auth"
 	"net/http"
 	"os"
 	"time"
 )
 
 type AuthenticationController struct {
-	loginUseCase   *usecases.LoginUseCase
-	verifyUseCase  *usecases.VerifyUseCase
-	refreshUseCase *usecases.RefreshUseCase
-	revokeUseCase  *usecases.RevokeUseCase
-	sessionUseCase *usecases.SessionUseCase
+	authService ports.AuthService
 }
 
-func NewAuthenticationController(loginUseCase *usecases.LoginUseCase, verifyUseCase *usecases.VerifyUseCase, refreshUseCase *usecases.RefreshUseCase, revokeUseCase *usecases.RevokeUseCase, sessionUseCase *usecases.SessionUseCase) *AuthenticationController {
+func NewAuthenticationController(authService ports.AuthService) *AuthenticationController {
 	return &AuthenticationController{
-		loginUseCase:   loginUseCase,
-		verifyUseCase:  verifyUseCase,
-		refreshUseCase: refreshUseCase,
-		revokeUseCase:  revokeUseCase,
-		sessionUseCase: sessionUseCase,
+		authService,
 	}
 }
 
@@ -39,7 +31,7 @@ func (c *AuthenticationController) Login(w http.ResponseWriter, r *http.Request)
 		ResponseError(w, http.StatusUnprocessableEntity, err.Error())
 		return
 	}
-	out, err := c.loginUseCase.Execute(*body)
+	out, err := c.authService.Login(*body)
 	if err != nil {
 		ResponseError(w, http.StatusBadRequest, err.Error())
 		return
@@ -54,7 +46,7 @@ func (c *AuthenticationController) Login(w http.ResponseWriter, r *http.Request)
 		Secure:   os.Getenv("environment") == "prod",
 	})
 	fmt.Println(out.Link)
-	ResponseMessage(w, http.StatusOK, &out.Message)
+	ResponseMessage(w, http.StatusOK, out.Message)
 }
 
 // Verify verifies the authentication token and fingerprint.
@@ -71,7 +63,7 @@ func (c *AuthenticationController) Verify(w http.ResponseWriter, r *http.Request
 		ResponseError(w, http.StatusBadRequest, "fingerprint not found")
 		return
 	}
-	out, err := c.verifyUseCase.Execute(token, fingerprint.Value, r.RemoteAddr, r.Header.Get("User-Agent"))
+	out, err := c.authService.Verify(token, fingerprint.Value, r.RemoteAddr, r.Header.Get("User-Agent"))
 	if err != nil {
 		ResponseError(w, http.StatusBadRequest, err.Error())
 		return
@@ -109,7 +101,7 @@ func (c *AuthenticationController) Logout(w http.ResponseWriter, r *http.Request
 			Secure:   os.Getenv("environment") == "prod",
 		})
 	}
-	err := c.revokeUseCase.Execute(session, r.Context().Value("user").(*token.UserClaims).UserId)
+	err := c.authService.Revoke(session, r.Context().Value("user").(*token.UserClaims).UserId)
 	if err != nil {
 		ResponseError(w, http.StatusInternalServerError, err.Error())
 		return
@@ -127,7 +119,7 @@ func (c *AuthenticationController) Refresh(w http.ResponseWriter, r *http.Reques
 		ResponseError(w, http.StatusBadRequest, errors.New("Refresh token not found").Error())
 		return
 	}
-	out, err := c.refreshUseCase.Execute(cookie.Value)
+	out, err := c.authService.Refresh(cookie.Value)
 	if err != nil {
 		ResponseError(w, http.StatusInternalServerError, err.Error())
 		return
@@ -146,7 +138,7 @@ func (c *AuthenticationController) Sessions(w http.ResponseWriter, r *http.Reque
 		ResponseError(w, http.StatusBadRequest, errors.New("Refresh token not found").Error())
 		return
 	}
-	out, err := c.sessionUseCase.Execute(userId, refresh.Value)
+	out, err := c.authService.Sessions(userId, refresh.Value)
 	if err != nil {
 		ResponseError(w, http.StatusInternalServerError, err.Error())
 		return

@@ -8,3 +8,103 @@
 {"level":"info","ts":1706389021.966771,"msg":"refresh request","refresh":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
 {"level":"info","ts":1706390953.6744797,"msg":"HTTP server stoping serving connections"}
 {"level":"info","ts":1706390953.6744797,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706447010.0075123,"msg":"refresh request","refresh":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447012.8415704,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"error","ts":1706447012.855419,"msg":"error getting sessions from cache","error":"redis: nil"}
+{"level":"info","ts":1706447014.4128337,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447015.2678993,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447146.5960147,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447148.889288,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447150.8969128,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447151.8613963,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447152.490713,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447153.2752287,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447154.0249712,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447169.1099932,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447231.0094528,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447302.9773166,"msg":"revoke request","session_id":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a","logged_user":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd"}
+{"level":"info","ts":1706447307.1293051,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447308.603239,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447309.7711756,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447322.5358136,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447355.9321382,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"d3c1d029-88b2-43ba-8e6b-296f740d6a7a"}
+{"level":"info","ts":1706447958.9684515,"msg":"login request","email":"teste@teste.com"}
+{"level":"error","ts":1706447958.9710689,"msg":"error creating magic link","error":"redis: can't marshal *entities.MagicLink (implement encoding.BinaryMarshaler)"}
+{"level":"info","ts":1706447986.8069952,"msg":"verify request","code":"8daaf0db9d29e0d954c0c34d394d84ca598d1ecf1d160042ea86b1ac6c9dee24da4a1c989ce5008118a62bd7d7da31baf967bdd9494fc47472e9b4233f6365fc","cookie":"a101c169472e328c108d55ef0f00a27b31356e1ccc44c792b7fbe1aee30b69d11ed19b9fc03f5e0a2218e68a267e8573f98ac74fdee3e21655c2966448a27778","ip":"[::1]:53630","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"error","ts":1706447987.4312642,"msg":"error finding magic link","error":"redis: nil"}
+{"level":"info","ts":1706448083.9618514,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706448083.9618514,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706448094.6308126,"msg":"verify request","code":"8daaf0db9d29e0d954c0c34d394d84ca598d1ecf1d160042ea86b1ac6c9dee24da4a1c989ce5008118a62bd7d7da31baf967bdd9494fc47472e9b4233f6365fc","cookie":"a101c169472e328c108d55ef0f00a27b31356e1ccc44c792b7fbe1aee30b69d11ed19b9fc03f5e0a2218e68a267e8573f98ac74fdee3e21655c2966448a27778","ip":"[::1]:55534","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"error","ts":1706448094.6435602,"msg":"error finding magic link","error":"redis: nil"}
+{"level":"info","ts":1706448098.708684,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706448098.708684,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706448147.254719,"msg":"verify request","code":"8daaf0db9d29e0d954c0c34d394d84ca598d1ecf1d160042ea86b1ac6c9dee24da4a1c989ce5008118a62bd7d7da31baf967bdd9494fc47472e9b4233f6365fc","cookie":"a101c169472e328c108d55ef0f00a27b31356e1ccc44c792b7fbe1aee30b69d11ed19b9fc03f5e0a2218e68a267e8573f98ac74fdee3e21655c2966448a27778","ip":"[::1]:56343","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"error","ts":1706448147.2688074,"msg":"error finding magic link","error":"redis: nil"}
+{"level":"info","ts":1706448184.0501072,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706448184.0501072,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706448196.1076877,"msg":"verify request","code":"8daaf0db9d29e0d954c0c34d394d84ca598d1ecf1d160042ea86b1ac6c9dee24da4a1c989ce5008118a62bd7d7da31baf967bdd9494fc47472e9b4233f6365fc","cookie":"a101c169472e328c108d55ef0f00a27b31356e1ccc44c792b7fbe1aee30b69d11ed19b9fc03f5e0a2218e68a267e8573f98ac74fdee3e21655c2966448a27778","ip":"[::1]:57021","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"error","ts":1706448196.123231,"msg":"error finding magic link","error":"redis: nil"}
+{"level":"info","ts":1706448230.1980317,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706448230.1980317,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706448240.5431075,"msg":"login request","email":"teste@teste.com"}
+{"level":"error","ts":1706448240.54618,"msg":"error creating magic link","error":"redis: can't marshal *entities.MagicLink (implement encoding.BinaryMarshaler)"}
+{"level":"info","ts":1706448253.7256637,"msg":"verify request","code":"cffde61d397c12c448cd15cb9109b2f617b45fb1d2ddb05d81266d42b4b4a1ad38db595ddaf2f6d9749b5fefb32af3aa492be19f683b64aef269f9b7d397a495","cookie":"6cee5d1971e4acb7eb85c4a0499ef0aa26376fe17c89e56fea09063494bf69fd0d2e3a4cb58d338e8be5aab1c66f1fbbaf224c9ec1f44d77aa80d6b1c9c0de32","ip":"[::1]:57705","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"error","ts":1706448254.1997886,"msg":"error finding magic link","error":"redis: nil"}
+{"level":"info","ts":1706448256.5154846,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706448256.5154846,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706448298.193127,"msg":"login request","email":"teste@teste.com"}
+{"level":"error","ts":1706448298.1951787,"msg":"error creating magic link","error":"redis: can't marshal *entities.MagicLink (implement encoding.BinaryMarshaler)"}
+{"level":"info","ts":1706448307.4315054,"msg":"verify request","code":"51552e2e4a7d7981204a67c96692d32b858c66f78f7c1e52b019a0590a3e717f4e8cf1d5207163e5eeeeefac25d42ec624b382e6e06ccb82cdbd3de7d3426aac","cookie":"58b21927cd2ad8acc7b11e5419050eba51bc953e80c38bd4e6651c29af9a75144ccab1f0c851e6ce4488fb141b4f9750f13924d07367b7188c7d1e95dcdf5c2d","ip":"[::1]:58553","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"error","ts":1706448308.0584707,"msg":"error finding magic link","error":"redis: nil"}
+{"level":"info","ts":1706448333.0457997,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706448333.0457997,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706448349.9255323,"msg":"login request","email":"teste@teste.com"}
+{"level":"error","ts":1706448349.92758,"msg":"error creating magic link","error":"redis: can't marshal *entities.MagicLink (implement encoding.BinaryMarshaler)"}
+{"level":"info","ts":1706448400.8695912,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706448400.8695912,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706448414.2144902,"msg":"login request","email":"teste@teste.com"}
+{"level":"info","ts":1706448423.4074607,"msg":"verify request","code":"6db02603dc9866da68651c5c1de11f6195bd257e4434965db842c6e1239c50a7d3bee9e1fba12d5e6efff7cdc7deb4c20f43b70ba93462dddd40d81e272414d1","cookie":"230017ab5b064d39b1f3cc902e2b1dd0255b66e7aa377d2c53945cc0039d2927bf815f197d190ab7612a0ff08d3fc383d1f94b5d0424c0645fcb0f4c260ecddd","ip":"[::1]:60292","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"error","ts":1706448423.4233966,"msg":"error invalidating magic link","error":"redis: can't marshal *entities.MagicLink (implement encoding.BinaryMarshaler)"}
+{"level":"info","ts":1706448423.6258633,"msg":"get geo location","ip":"[::1]:60292","location":null}
+{"level":"info","ts":1706448428.2453117,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"7f02fdd1-93f5-4dea-b4ff-d7dd2240d988"}
+{"level":"info","ts":1706448997.406141,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706448997.406141,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706449017.197544,"msg":"login request","email":"teste@teste.com"}
+{"level":"info","ts":1706449027.7679625,"msg":"verify request","code":"8b9dda17ff2e35eb5bd363bf05b916807a88a94b9c40bc3a2b7657614c04a68b4eede186fffef7353148751176ff9cad9921d490c71b02b5fe12b942ec56184a","cookie":"2b675ec5d274d9cb26a2b1b7036ea0e6ee249b32f220972818f3b3360f51503abc0b6cd83422fcb74daaa21419be892654020099134cc5bdf597d1ef9df0fc52","ip":"[::1]:52743","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"info","ts":1706449028.8716135,"msg":"get geo location","ip":"[::1]:52743","location":null}
+{"level":"info","ts":1706449032.2765036,"msg":"sessions request","user_id":"2d446e34-52df-4197-a695-41219fc4d802","current_token":"a9cb19f9-0e70-427e-97ed-daef234001cd"}
+{"level":"info","ts":1706449069.1447856,"msg":"sessions request","user_id":"2d446e34-52df-4197-a695-41219fc4d802","current_token":"a9cb19f9-0e70-427e-97ed-daef234001cd"}
+{"level":"info","ts":1706449076.2852685,"msg":"refresh request","refresh":"a9cb19f9-0e70-427e-97ed-daef234001cd"}
+{"level":"info","ts":1706449079.1033773,"msg":"sessions request","user_id":"2d446e34-52df-4197-a695-41219fc4d802","current_token":"a9cb19f9-0e70-427e-97ed-daef234001cd"}
+{"level":"info","ts":1706449090.464297,"msg":"sessions request","user_id":"2d446e34-52df-4197-a695-41219fc4d802","current_token":"a9cb19f9-0e70-427e-97ed-daef234001cd"}
+{"level":"info","ts":1706449304.2491977,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706449304.2491977,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706449333.8419855,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706449333.8419855,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706449379.0938594,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706449379.0938594,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706451682.8886847,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706451682.8886847,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706488052.210413,"msg":"refresh request","refresh":"a9cb19f9-0e70-427e-97ed-daef234001cd"}
+{"level":"info","ts":1706488056.6412106,"msg":"refresh request","refresh":"a9cb19f9-0e70-427e-97ed-daef234001cd"}
+{"level":"info","ts":1706488072.1577694,"msg":"login request","email":"teste@teste.com"}
+{"level":"info","ts":1706488081.766782,"msg":"verify request","code":"85ad8c34d0e4a2b000f60be44fc52a33b5a9e776624002a3fbe78b188405d0c1c94b70a5c5c06c6731547a039af28b97f24bd40d422a5cceae0aa41140bfe74a","cookie":"f21b79b69550dbe7c39978554d6c9b01edd9b9f0905b81cca5af07287fdb2827d9bc272430b3c0fe7359cb7fb7bf54e5b71efb845f4ae355c809c9abf5c35d0e","ip":"[::1]:63744","ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"}
+{"level":"info","ts":1706488081.973234,"msg":"get geo location","ip":"66.241.125.71","location":{"ip":"66.241.125.71","latitude":"37.751","longitude":"-97.822","city":null,"region":null,"country":"United States","organization_name":"FLY"}}
+{"level":"info","ts":1706488084.9393618,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706488100.8968184,"msg":"revoke request","session_id":"7f02fdd1-93f5-4dea-b4ff-d7dd2240d98","logged_user":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd"}
+{"level":"error","ts":1706488100.8983502,"msg":"error finding session","error":"pq: error in argument for $1: could not parse \"7f02fdd1-93f5-4dea-b4ff-d7dd2240d98\" as type uuid: could not parse \"7f02fdd1-93f5-4dea-b4ff-d7dd2240d98\" as type uuid: uuid: incorrect UUID format: 7f02fdd1-93f5-4dea-b4ff-d7dd2240d98"}
+{"level":"info","ts":1706488115.2547107,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706488125.1261113,"msg":"revoke request","session_id":"7f02fdd1-93f5-4dea-b4ff-d7dd2240d988","logged_user":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd"}
+{"level":"info","ts":1706488128.3697665,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706489209.2932193,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706489209.2932193,"msg":"HTTP server shutdown"}
+{"level":"error","ts":1706527068.5961514,"msg":"failed to connect pg database"}
+{"level":"info","ts":1706527102.7276895,"msg":"HTTP server shutdown"}
+{"level":"info","ts":1706527102.7276895,"msg":"HTTP server stoping serving connections"}
+{"level":"info","ts":1706531721.6384056,"msg":"refresh request","refresh":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706531723.90418,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706541069.8355875,"msg":"refresh request","refresh":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706548641.3007987,"msg":"refresh request","refresh":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706555508.8315883,"msg":"refresh request","refresh":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706555511.7807655,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"6c915182-a03a-4c35-866d-c2a539e6a392"}
+{"level":"info","ts":1706555558.9573085,"msg":"sessions request","user_id":"2ef45792-0c0f-4c4f-978c-e77ec9f06cbd","current_token":"6c915182-a03a-4c35-866d-c2a539e6a392"}
